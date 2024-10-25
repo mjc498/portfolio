@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
+
+<!-- NAVIGATION -->
+    <header>
+        <div class="logo">
+            <h1>Contact</h1>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+<!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </nav>
+    </header>
+
+<!-- MAIN CONTENT -->
+    <main>
+    lorem ipsum
+    </main>
+
+<!-- FOOTER -->
+    <footer>
+    <div class="footer-content">
+    <div class="footer-logo">
+        <h1>My Portfolio</h1>
+    </div>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="social-media">
+        <a href="https://www.linkedin.com/in/maria-louisa-ching/" class="social-icon">🙋‍♀️</a>
+        <a href="mailto:mjc498@drexel.edu"class="social-icon">✉️</a>
+    </div>
+    </div>
+    <div class="footer-bottom">
+    <p>&copy; 2023 Maria-Louisa Ching. All rights reserved.</p>
+    </div>
+    </footer>
+
+<!-- SCRIPT -->
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navList.classList.toggle('active');
+    });
+    </script>
     
 </body>
 </html>

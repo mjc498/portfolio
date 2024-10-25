@@ -177,7 +177,7 @@ nav ul li a:hover::after {
 footer {
     background-color: var(--header-color);
     color: var(--primary-bg-color);
-    padding: 20px 10%;
+    padding: 10px 10px;
     text-align: center;
     position: relative; 
 }
