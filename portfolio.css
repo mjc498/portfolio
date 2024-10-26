@@ -200,7 +200,6 @@ nav ul li a:hover::after {
     color: var(--header-color);
 }
 
-/* Remove underline from link */
 a {
     text-decoration: none;
 }
@@ -321,4 +320,61 @@ footer {
 .footer-bottom {
     margin-top: 20px;
     font-size: 14px;
+}
+
+/* RESUME */
+.name {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'monsterrat';
+    color: var(--primary-font-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    padding-top: 50px;
+    width: 200px;
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+}
+
+h3 {
+    font-family: 'poppins';
+    color: var(--header-color);
+    margin-top: 15px;
+    padding-left: 0; 
+}
+
+p, ul {
+    font-family: 'poppins';
+    color: var(--primary-font-color);
+    margin: 5px 0;
+    padding-left: 0;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px; 
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: left; 
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 10px; 
+    }
 }
