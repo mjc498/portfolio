@@ -20,6 +20,11 @@
     src: url(fonts/poppins/regular.ttf);
 }
 
+@font-face {
+    font-family: 'poppins-light-italic';
+    src: url(fonts/poppins/light-italic.ttf);
+}
+
 /* ------------------------------------------ */
 /* ALL */
 * {
@@ -408,9 +413,21 @@ main {
     height: 350px;
 }
 
-.favorite-dishes {
-    width: 100%; 
-    height: auto; 
+.caption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-family: 'poppins-light-italic';
+}
+
+.professional-section img, .personal-section img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--accent-color); 
     border-radius: 10px;
-    margin-top: 15px;
+}
+
+.personal-section img {
+    width: 500px;
+    height: 400px;
 }
