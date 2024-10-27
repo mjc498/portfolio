@@ -173,8 +173,6 @@ nav ul li a:hover::after {
 }
 
 /* ------------------------------------------ */
-/* HOME */
-/* HOME */
 .hero {
     display: flex;
     flex-direction: column;
@@ -189,8 +187,6 @@ nav ul li a:hover::after {
     color: var(--primary-font-color);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid var(--accent-color);
-    width: 0;
     animation: typing 2s steps(14, end) forwards, blink 0.5s step-end infinite alternate;
 }
 
@@ -201,7 +197,7 @@ nav ul li a:hover::after {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* Ensure this doesn't apply to any other links */
 }
 
 .cta-button {
@@ -244,10 +240,6 @@ a {
     from { width: 0; }
     to { width: 100%; }
 }
-
-@keyframes blink {
-    50% { border-color: transparent; }
-} 
 
 /* ------------------------------------------ */
 /* FOOTER */
@@ -378,3 +370,5 @@ main {
         padding: 10px; 
     }
 }
+
+/* ABOUT */
