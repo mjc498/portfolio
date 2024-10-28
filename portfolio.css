@@ -442,8 +442,12 @@ main {
     align-items: center;
     gap: 50px;
     margin-top: 30px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     padding-top: 150px;
+    padding-left: 10px; 
+    padding-right: 10px;
+    box-sizing: border-box;
 }
 
 .options {
