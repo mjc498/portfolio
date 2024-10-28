@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio - digital media</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="logo">
+        <h1>Portfolio</h1>
+    </div>
+    <nav>
+        <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+
+<!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+        </nav>
+    </header>
+
+<!-- MAIN -->
+    <h2 class="portfolioTitle">
+        <b>Digital Media</b>
+    </h2>
+
+    <div class="portfolioGrid">
+
+<!-- Design 1 -->
+    <div class="designBorder">
+        <a href="digital1.html">
+            <img
+                alt="Adobe Photoshop digital composition showcasing black and white shapes and patterns on a bathroom shower curtain"
+                class="imagePortfolio"
+                src="graphics/design-01.png"
+                loading="eager">
+        </a>
+        <p class="caption">
+            <i>Shape and Pattern</i> (2023)
+            <br>
+            Adobe Photoshop
+        </p>
+    </div>
+
+<!-- Design 2-->
+        <div class="designBorder">
+            <a href="https://idm231-mjc498.netlify.app/">
+                <img
+                    alt="screenshot of Zodiac sign website with a Super Mario theme"
+                    class="imagePortfolio"
+                    src="images/mario.png"
+                    loading="eager">
+            </a>
+            <p class="caption">
+                <i>Super Mario Zodiac World</i> (2024)
+                <br>
+                HTML | CSS | JavaScript
+            </p>
+        </div>
+
+<!-- Design 3 -->
+        <div class="designBorder">
+            <a href="digital3.html">
+                <img
+                    alt="Adobe Illustrator digital composition showcasing a monochrome portrait with blue and orange colors"
+                    class="imagePortfolio"
+                    src="graphics/designn-01.png"
+                    loading="eager">
+            </a>
+            <p class="caption">
+                <i>Low Poly Portrait</i> (2024)
+                <br>
+                Adobe Photoshop and Adobe Illustrator
+            </p>
+        </div>
+
+    </div>
+
+<!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+        <div class="footer-logo">
+            <h1>My Portfolio</h1>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/maria-louisa-ching/" class="social-icon">🙋‍♀️</a>
+            <a href="mailto:mjc498@drexel.edu"class="social-icon">✉️</a>
+        </div>
+        </div>
+        <div class="footer-bottom">
+        <p>&copy; 2023 Maria-Louisa Ching. All rights reserved.</p>
+        </div>
+    </footer>
+
+<!-- SCRIPT -->
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navList.classList.toggle('active');
+    });
+    </script>
+
+</body>
+</html>

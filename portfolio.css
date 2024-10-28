@@ -202,7 +202,7 @@ nav ul li a:hover::after {
 }
 
 a {
-    text-decoration: none; /* Ensure this doesn't apply to any other links */
+    text-decoration: none; 
 }
 
 .cta-button {
@@ -330,7 +330,7 @@ h2 {
     font-family: 'monsterrat';
     color: var(--primary-font-color);
     margin-bottom: 10px;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--secondary-bg-color);
     padding-bottom: 5px;
     padding-top: 50px;
     width: 200px;
@@ -423,11 +423,133 @@ main {
 .professional-section img, .personal-section img {
     display: block;
     margin: 0 auto;
-    border: 2px solid var(--accent-color); 
+    border: 2px solid var(--secondary-bg-color); 
     border-radius: 10px;
 }
 
 .personal-section img {
     width: 500px;
     height: 400px;
+}
+
+/* PORTFOLIO */
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+    width: 500px;
+    padding-top: 150px;
+}
+
+.options {
+    background-color: var(--secondary-bg-color);
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    animation: inactiveBounce 3s infinite;
+}
+
+.options a {
+    color: var(--primary-font-color);
+    text-decoration: none;
+    font-family: 'poppins';
+    font-size: 36px;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.options:hover {
+    transform: scale(1.05); 
+    background-color: var(--accent-color);
+    animation: none; 
+}
+
+.options a:hover {
+    color: var(--primary-bg-color);
+}
+
+.options:active {
+    transform: scale(0.95);
+    background-color: var(--header-color);
+}
+
+.options a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-font-color);
+    transition: width 0.3s ease;
+}
+
+.options a:hover::after {
+    width: 100%;
+}
+
+@keyframes inactiveBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px); 
+    }
+}
+
+/* DIGITAL */
+.portfolioTitle {
+    font-family: 'monsterrat';
+    color: var(--primary-font-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    width: 250px;
+}
+
+.portfolioGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.designBorder {
+    text-align: center;
+    background-color: var(--primary-bg-color);
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.imagePortfolio {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.designBorder:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+.designBorder:hover .imagePortfolio {
+    opacity: 0.8;
+}
+
+.caption {
+    font-family: 'poppins';
+    color: var(--primary-font-color);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.caption i {
+    color: var(--header-color);
+    font-style: italic;
 }
