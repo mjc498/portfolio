@@ -382,6 +382,7 @@ main {
 /* ABOUT */
 .about-me {
     text-align: left; 
+    padding: 0 15px;
 }
 
 .about-header {
@@ -394,6 +395,7 @@ main {
     color: var(--primary-font-color);
     border-bottom: 2px solid var(--accent-color);
     padding-bottom: 10px;
+    font-size: 2rem;
 }
 
 .personal-section, .professional-section {
@@ -404,16 +406,23 @@ main {
     font-family: 'monsterrat';
     color: var(--header-color);
     margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
 .personal-content, .professional-content {
     font-family: 'poppins';
     color: var(--primary-font-color);
+    font-size: 1rem;
 }
 
-.professional {
-    width: 500px;
-    height: 350px;
+/* Responsive Images */
+.professional-section img, .personal-section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border: 2px solid var(--secondary-bg-color); 
+    border-radius: 10px;
 }
 
 .caption {
@@ -423,16 +432,60 @@ main {
     font-family: 'poppins-light-italic';
 }
 
-.professional-section img, .personal-section img {
-    display: block;
-    margin: 0 auto;
-    border: 2px solid var(--secondary-bg-color); 
-    border-radius: 10px;
+/* Flexbox for Layout on Larger Screens */
+.professional-section, .personal-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.personal-section img {
-    width: 500px;
-    height: 400px;
+.professional-content, .personal-content {
+    flex: 1 1 60%;
+    min-width: 250px;
+}
+
+.professional-section img, .personal-section img {
+    flex: 1 1 300px;
+    max-width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .personal-section h3, .professional-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .personal-content, .professional-content {
+        font-size: 0.9rem;
+    }
+
+    /* Stack items vertically on smaller screens */
+    .professional-section, .personal-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .professional-section h3, .personal-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .personal-content, .professional-content {
+        font-size: 0.8rem;
+    }
+    
+    /* Additional padding for small screens */
+    .about-me {
+        padding: 0 10px;
+    }
 }
 
 /* PORTFOLIO */
