@@ -344,7 +344,10 @@ a {
 }
 
 .personal-section, .professional-section {
-    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .personal-section h3, .professional-section h3 {
@@ -378,8 +381,8 @@ a {
 
 .professional-section, .personal-section {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column; 
+    margin-bottom: 40px;
 }
 
 .professional-content, .personal-content {
@@ -407,6 +410,29 @@ a {
 
     .professional-section, .personal-section {
         flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    .professional-section, .personal-section {
+        flex-direction: row; 
+    }
+
+    .professional-section h3, .personal-section h3 {
+        width: 100%; 
+        order: -1; 
+    }
+
+    .professional-content, .personal-content {
+        order: 0; 
+        flex: 1 1 60%; 
+        min-width: 250px;
+    }
+
+    .professional-section img, .personal-section img {
+        order: 1; 
+        flex: 1 1 300px; 
+        max-width: 100%;
     }
 }
 
