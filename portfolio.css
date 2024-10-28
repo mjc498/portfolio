@@ -92,6 +92,7 @@ nav ul li a:hover::after {
     width: 100%; 
 } 
 
+/* ------------------------------------------ */
 /* HAMBURGER */ 
 .hamburger {
     display: none;
@@ -123,7 +124,6 @@ nav ul li a:hover::after {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* HAMBURGER - MEDIA */
 @media (max-width: 768px) {
     nav ul {
         position: fixed;
@@ -175,78 +175,6 @@ nav ul li a:hover::after {
     nav ul li a:hover {
         background-color: var(--accent-color);
     }
-}
-
-/* ------------------------------------------ */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.intro-text h2 {
-    font-family: 'monsterrat';
-    font-size: 3rem;
-    color: var(--primary-font-color);
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 2s steps(14, end) forwards, blink 0.5s step-end infinite alternate;
-}
-
-.intro-text p {
-    font-family: 'poppins';
-    font-size: 1.5rem;
-    color: var(--header-color);
-}
-
-a {
-    text-decoration: none; 
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--primary-bg-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    color: var(--primary-font-color);
-    background-color: var(--secondary-bg-color); 
-}
-
-.profile-pic-container {
-    position: relative;
-    margin-top: 40px;
-}
-
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid var(--accent-color);
-    object-fit: cover;
-}
-
-.intro-text, .cta-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
 }
 
 /* ------------------------------------------ */
@@ -322,6 +250,185 @@ footer {
     font-size: 14px;
 }
 
+/* ------------------------------------------ */
+/* HOME */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.intro-text h2 {
+    font-family: 'monsterrat';
+    font-size: 3rem;
+    color: var(--primary-font-color);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(14, end) forwards, blink 0.5s step-end infinite alternate;
+}
+
+.intro-text p {
+    font-family: 'poppins';
+    font-size: 1.5rem;
+    color: var(--header-color);
+}
+
+a {
+    text-decoration: none; 
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    color: var(--primary-font-color);
+    background-color: var(--secondary-bg-color); 
+}
+
+.profile-pic-container {
+    position: relative;
+    margin-top: 40px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    object-fit: cover;
+}
+
+.intro-text, .cta-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* ------------------------------------------ */
+/* ABOUT */
+.about-me {
+    text-align: left; 
+    padding: 0 15px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h2 {
+    font-family: 'monsterrat';
+    color: var(--primary-font-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+.personal-section, .professional-section {
+    margin-bottom: 40px;
+}
+
+.personal-section h3, .professional-section h3 {
+    font-family: 'monsterrat';
+    color: var(--header-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.personal-content, .professional-content {
+    font-family: 'poppins';
+    color: var(--primary-font-color);
+    font-size: 1rem;
+}
+
+.professional-section img, .personal-section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border: 2px solid var(--secondary-bg-color); 
+    border-radius: 10px;
+}
+
+.caption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-family: 'poppins-light-italic';
+}
+
+.professional-section, .personal-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.professional-content, .personal-content {
+    flex: 1 1 60%;
+    min-width: 250px;
+}
+
+.professional-section img, .personal-section img {
+    flex: 1 1 300px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .about-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .personal-section h3, .professional-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .personal-content, .professional-content {
+        font-size: 0.9rem;
+    }
+
+    .professional-section, .personal-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .professional-section h3, .personal-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .personal-content, .professional-content {
+        font-size: 0.8rem;
+    }
+    
+    .about-me {
+        padding: 0 10px;
+    }
+}
+
+/* ------------------------------------------ */
 /* RESUME */
 .name {
     text-align: center;
@@ -379,115 +486,7 @@ main {
     }
 }
 
-/* ABOUT */
-.about-me {
-    text-align: left; 
-    padding: 0 15px;
-}
-
-.about-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.about-header h2 {
-    font-family: 'monsterrat';
-    color: var(--primary-font-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 10px;
-    font-size: 2rem;
-}
-
-.personal-section, .professional-section {
-    margin-bottom: 40px;
-}
-
-.personal-section h3, .professional-section h3 {
-    font-family: 'monsterrat';
-    color: var(--header-color);
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.personal-content, .professional-content {
-    font-family: 'poppins';
-    color: var(--primary-font-color);
-    font-size: 1rem;
-}
-
-/* Responsive Images */
-.professional-section img, .personal-section img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-    border: 2px solid var(--secondary-bg-color); 
-    border-radius: 10px;
-}
-
-.caption {
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 5px;
-    font-family: 'poppins-light-italic';
-}
-
-/* Flexbox for Layout on Larger Screens */
-.professional-section, .personal-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.professional-content, .personal-content {
-    flex: 1 1 60%;
-    min-width: 250px;
-}
-
-.professional-section img, .personal-section img {
-    flex: 1 1 300px;
-    max-width: 100%;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .about-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .personal-section h3, .professional-section h3 {
-        font-size: 1.3rem;
-    }
-
-    .personal-content, .professional-content {
-        font-size: 0.9rem;
-    }
-
-    /* Stack items vertically on smaller screens */
-    .professional-section, .personal-section {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
-    .about-header h2 {
-        font-size: 1.5rem;
-    }
-
-    .professional-section h3, .personal-section h3 {
-        font-size: 1.1rem;
-    }
-
-    .personal-content, .professional-content {
-        font-size: 0.8rem;
-    }
-    
-    /* Additional padding for small screens */
-    .about-me {
-        padding: 0 10px;
-    }
-}
-
+/* ------------------------------------------ */
 /* PORTFOLIO */
 .optionsContainer {
     display: flex;
@@ -560,6 +559,7 @@ main {
     }
 }
 
+/* ------------------------------------------ */
 /* DIGITAL */
 .portfolioContainer {
     display: flex;
@@ -631,5 +631,3 @@ main {
     color: var(--header-color);
     font-style: italic;
 }
-
-/* DESIGN 1 */
