@@ -206,19 +206,22 @@ a {
 }
 
 .cta-button {
+    display: inline-block;
     background-color: var(--accent-color);
     color: var(--primary-bg-color);
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--header-color);
+    color: var(--primary-font-color);
+    background-color: var(--secondary-bg-color); 
 }
 
 .profile-pic-container {
