@@ -33,13 +33,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    box-shadow: 0 2px 10px var(--grey);
     transition: all 0.3s ease;
 }
 
 nav.scrolled {
     padding: 1rem 5%;
-    box-shadow: 0 2px 20px var(--grey);
 }
 
 .logo {
@@ -94,12 +92,21 @@ nav.scrolled {
 }
 
 /* Hero Section */
+section.hero {
+    padding: 0;
+    max-width: none;
+    margin: 0;
+}
+
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--strawberry);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero_image.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 0 5%;
     margin-top: 80px;
 }
@@ -108,25 +115,26 @@ nav.scrolled {
     max-width: 800px;
     text-align: left;
     animation: fadeInUp 1s ease;
+    padding: 0 2.5%;
 }
 
 .hero h1 {
     font-size: 82px;
     margin-bottom: 1rem;
     font-family: 'fredoka', sans-serif;
-    color: var(--black);
+    color: var(--white);
 }
 
 .hero h2 {
     font-size: 1.8rem;
-    color: var(--black);
+    color: var(--white);
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: var(--black);
+    color: var(--white);
     margin-bottom: 2.5rem;
 }
 
@@ -139,13 +147,13 @@ nav.scrolled {
     border-radius: 6px;
     font-weight: 700;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(184, 92, 56, 0.3);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(184, 92, 56, 0.4);
-    background: #A04F30;
+    background: var(--white);
+    color: var(--brown);
+    border: 2px solid var(--brown);
 }
 
 /* Section Styles */
@@ -160,7 +168,7 @@ section {
     font-family: 'fredoka', sans-serif;
     margin-bottom: 3rem;
     text-align: center;
-    color: var(--dark);
+    color: var(--black);
     position: relative;
 }
 
@@ -169,7 +177,6 @@ section {
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--primary);
     margin: 1rem auto;
 }
 
@@ -198,7 +205,7 @@ section {
 .card-image {
     width: 100%;
     height: 250px;
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    background: linear-gradient(135deg, var(--strawberry), var(--white));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,11 +226,11 @@ section {
 .card-content h3 {
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
-    color: var(--dark);
+    color: var(--brown);
 }
 
 .card-content p {
-    color: #666;
+    color: var(--black);
     margin-bottom: 1rem;
 }
 
@@ -235,10 +242,10 @@ section {
 
 .tag {
     padding: 0.3rem 0.8rem;
-    background: var(--light);
+    background: var(--grey);
     border-radius: 20px;
     font-size: 0.85rem;
-    color: var(--primary);
+    color: var(--black);
     font-weight: 500;
 }
 
@@ -291,6 +298,45 @@ section {
     color: var(--primary);
 }
 
+/* About */
+.about-section {
+    padding: 4rem;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.section-divider {
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;  
+    height: 2px;
+    background: var(--strawberry);
+}
+
+.section-divider:last-of-type::after {
+    display: none;
+}
+
 /* Testimonial */
 .testimonial {
     background: var(--white);
@@ -298,14 +344,14 @@ section {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    margin: 4rem 0;
+    /* margin: 4rem 0; */
     position: relative;
 }
 
 .testimonial::before {
     content: '"';
     font-size: 6rem;
-    color: var(--secondary);
+    color: var(--strawberry);
     position: absolute;
     top: -20px;
     left: 30px;
@@ -315,19 +361,19 @@ section {
 .testimonial-text {
     font-size: 1.3rem;
     font-style: italic;
-    color: #555;
+    color: var(--black);
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
 .testimonial-author {
     font-weight: 600;
-    color: var(--primary);
+    color: var(--black);
     font-size: 1.1rem;
 }
 
 .testimonial-role {
-    color: #888;
+    color: var(--brown);
     font-size: 0.95rem;
 }
 
@@ -498,10 +544,13 @@ section {
 
 /* Footer */
 footer {
-    background: var(--dark);
+    background: var(--brown); 
     color: var(--white);
     text-align: center;
     padding: 2rem 5%;
+    position: relative;
+    z-index: 1;
+    margin-top: 4rem;
 }
 
 .social-links {
@@ -515,10 +564,11 @@ footer {
     color: var(--white);
     font-size: 1.5rem;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .social-links a:hover {
-    color: var(--secondary);
+    color: var(--strawberry); 
     transform: translateY(-3px);
 }
 

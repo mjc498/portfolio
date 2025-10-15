@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maria-Louisa Ching</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="Vector_Logo.svg">
-
+    <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
 </head>
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <div class="logo"><img src="Vector_Logo.svg" alt="Logo" class="nav-logo">  Maria</div>
+        <div class="logo"><img src="images/vector_logo.svg" alt="Logo" class="nav-logo">  MC</div>
         <ul class="nav-links">
             <li><a href="#" data-page="home">Home</a></li>
-            <li><a href="#" data-page="portfolio">Portfolio</a></li>
-            <li><a href="#" data-page="resume">Resume</a></li>
+            <li><a href="#" data-page="portfolio">My Work</a></li>
+            <li><a href="resume.html" data-page="resume">Resume</a></li>
             <li><a href="#" data-page="contact">Contact</a></li>
         </ul>
     </nav>
@@ -30,40 +29,48 @@
             </div>
         </section>
 
-        <section>
+        <section class="section-divider">
             <h2 class="section-title">Featured Work</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-card">
-                    <div class="card-image">[Project Image]</div>
+                    <div class="card-image">
+                        <img src="images/portfolio_linkedin.png" alt="LinkedIn Redesign">
+                    </div>
                     <div class="card-content">
                         <h3>LinkedIn Redesign</h3>
-                        <p>This case study focuses on the redesign of a section on the LinkedIn website -- a feature where users can "Connect" with each other on the platform.</p>
+                        <p>A 10-week solo redesign of LinkedIn's "Connect" microinteraction, transforming a static button into an engaging, accessible experience through motion design and intuitive user feedback.</p>
                         <div class="card-tags">
-                            <span class="tag">UX Design</span>
-                            <span class="tag">UI Design</span>
                             <span class="tag">Microinteractions</span>
+                            <span class="tag">Front-End Development</span>
+                            <span class="tag">User-Centered Design</span>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-card">
-                    <div class="card-image">[Project Image]</div>
+                    <div class="card-image">
+                        <img src="images/portfolio_recipebook.png" alt="Recipe Book Website">
+                    </div>
                     <div class="card-content">
                         <h3>Recipe Book Website</h3>
-                        <p>This case study explores the development of a dynamic website for an online cookbook featuring 40 recipes.</p>
+                        <p>A semester-long project exploring modern web design principles through hands-on development, responsive design, and user-focused functionality.</p>
                         <div class="card-tags">
-                            <span class="tag">PHP</span>
+                            <span class="tag">Back-End Development</span>
+                            <span class="tag">Information Architecture</span>
                             <span class="tag">MySQL</span>
+                            <span class="tag">PHP</span>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-card">
-                    <div class="card-image">[Project Image]</div>
+                    <div class="card-image">
+                        <img src="images/portfolio_lennox.png" alt="Lennox Got Lunch App">  
+                    </div>
                     <div class="card-content">
                         <h3>Lennox Got Lunch App</h3>
-                        <p>The Lennox Got Lunch app provides a seamless mobile interface, simplifying the process of ordering directly from the Lennox food truck.</p>
+                        <p>A collaborative 10-week project transforming a food truck brand into a fully functional, mobile-responsive web app with interactive animations and accessible user experiences.</p>
                         <div class="card-tags">
-                            <span class="tag">Frontend Development</span>
-                            <span class="tag">Backend Development</span>
+                            <span class="tag">Collaboration</span>
+                            <span class="tag">GitHub</span>
                             <span class="tag">Project Management</span>
                         </div>
                     </div>
@@ -71,21 +78,21 @@
             </div>
         </section>
 
-        <section>
-            <div class="testimonial">
-                <p class="testimonial-text">Maria demonstrated a strong work ethic, technical aptitude, and genuine enthusiasm for her projects. She stands out for her curiosity, collaborative spirit, clear communication, and thoughtful approach to problem-solving. She’s a quiet leader who consistently delivers quality work and builds strong connects – I highly recommend her for any future opportunity [...]</p>
-                <p class="testimonial-author">Charisse Smith</p>
-                <p class="testimonial-role">Director of Marketing Operations, NBME</p>
+        <!-- About Me -->
+        <section class="section-divider">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>👋 I am a fourth-year UX/UI student at Drexel University in the 5-year, 3 co-op program. I’m passionate about designing intuitive, inclusive digital experiences that connect creativity with human behavior. My interests lie at the intersection of psychology, technology, and design.</p>
+                <p>🗺️ When I'm not designing, you can find me exploring around Philly, reading fiction, or experimenting with the latest design tools!</p>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title">Artwork & Explorations</h2>
-            <div class="artwork-gallery">
-                <div class="artwork-item">[Artwork 1]</div>
-                <div class="artwork-item">[Artwork 2]</div>
-                <div class="artwork-item">[Artwork 3]</div>
-                <div class="artwork-item">[Artwork 4]</div>
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonial">
+                <p class="testimonial-text">Maria demonstrated a strong work ethic, technical aptitude, and genuine enthusiasm for her projects. She stands out for her curiosity, collaborative spirit, clear communication, and thoughtful approach to problem-solving. She's a quiet leader who consistently delivers quality work and builds strong connections—I highly recommend her for any future opportunity.</p>
+                <p class="testimonial-author">Charisse Smith</p>
+                <p class="testimonial-role">Director of Marketing Operations, NBME</p>
             </div>
         </section>
     </div>
@@ -164,7 +171,6 @@
         </section>
     </div>
 
-    <!-- Resume Page -->
     <div id="resume" class="page">
         <section style="margin-top: 100px;">
             <h2 class="section-title">Resume</h2>
