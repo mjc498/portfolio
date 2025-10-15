@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Maria-Louisa Ching</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo"><a href="index.html"><img src="images/vector_logo.svg" alt="Logo" class="nav-logo"></a>  MC</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="my_work.html">My Work</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Resume Hero -->
+    <div class="resume-hero">
+        <h1>My Professional Journey</h1>
+    </div>
+
+    <!-- Resume Content -->
+    <section>
+        <div class="resume-section">
+            <h3>Experience</h3>
+            <div class="resume-item">
+                <h4>Digital Marketing Analyst</h4>
+                <p class="resume-meta">NBME | April 2025 - September 2025</p>
+                <p>⦿ Advance NBME's accessibility goals by resolving barriers using Axe DevTools and WCAG guidelines</p>
+                <p>⦿ Analyze campaign performance using Google Analytics and Google Ads to optimize engagement</p>
+                <p>⦿ Coordinate digital content workflows via Monday.com, streamlining tracking processes across teams</p>
+                <p>⦿ Manage web content using Drupal, Google Tag Manager, OneTrust, and Salesforce</p>
+            </div>
+            <div class="resume-item">
+                <h4>Web Developer & Communications Associate</h4>
+                <p class="resume-meta">SEPTA | April 2024 - September 2024</p>
+                <p>⦿ Develop web content using WordPress, ensuring timely updates and user-friendly navigation</p>
+                <p>⦿ Collaborate with cross-functional teams to produce edit multimedia content</p>
+                <p>⦿ Craft clear, audience-focused messaging for internal and external communications</p>
+                <p>⦿ Create digital assets using Adobe Creative Cloud, supporting campaigns and public outreach</p>
+            </div>
+            <div class="resume-item">
+                <h4>DEI Public Policy Researcher</h4>
+                <p class="resume-meta">Comcast | September 2022 - March 2023</p>
+                <p>⦿ Collaborate across departments to foster an inclusive workplace culture as a DEI ambassador</p>
+                <p>⦿ Conduct research to support DEI policy initiatives aligned with Comcast's social impact goals</p>
+                <p>⦿ Organized internal materials and reports to communicate DEI strategies and progress</p>
+                <p>⦿ Provide project management support by tracking key metrics and maintaining documentation</p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h3>Education</h3>
+            <div class="resume-item">
+                <h4>Bachelor of Science in User Experience & Interaction Design</h4>
+                <p class="resume-meta">Drexel University | September 2022 - June 2027</p>
+                <p>My coursework emphasizes human-centered design, usability testing, interface development, and digital accessibility. I have completed co-ops at NBME, SEPTA, and Comcast, where I apply UX principles to real-world challenges in healthcare, transportation, and corporate DEI.</p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h3>Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-item"><span>Figma</span></div>
+                <div class="skill-item"><span>SvelteKit</span></div>
+                <div class="skill-item"><span>MySQL/PHP</span></div>
+                <div class="skill-item"><span>HTML/CSS</span></div>
+                <div class="skill-item"><span>User Research</span></div>
+                <div class="skill-item"><span>Web Accessibility</span></div>
+                <div class="skill-item"><span>Prototyping</span></div>
+                <div class="skill-item"><span>SalesForce</span></div>
+                <div class="skill-item"><span>Project Management</span></div>
+                <div class="skill-item"><span>Information Architecture</span></div>
+                <div class="skill-item"><span>WordPress CMS</span></div>
+                <div class="skill-item"><span>Jira</span></div>
+            </div>
+        </div>
+
+        <div class="download-resume">
+            <a href="files/MChing_Resume2025.pdf" class="download-button" target="_blank">Download Full Resume</a>
+        </div>
+
+        <div class="testimonial">
+            <p class="testimonial-text">I had the pleasure of working with Maria-Louisa Ching during her co-op at NBME from April 2025 to September 2025. She quickly became an invaluable member of the Marketing & Strategic Communications team, contributing to website accessibility remediation initiatives, UX/UI enhancements, and content updates with professionalism and efficiency. Additionally, she took initiative to develop a campaign to boost digital engagement with B2B users. 
+            Maria demonstrated a strong work ethic, technical aptitude, and genuine enthusiasm for her projects. She stands out for her curiosity, collaborative spirit, clear communication, and thoughtful approach to problem-solving. She's a quiet leader who consistently delivers quality work and builds strong connects – I highly recommend her for any future opportunity.</p>
+            <p class="testimonial-author">Charisse Smith</p>
+            <p class="testimonial-role">Director of Marketing Operations, NBME</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank">LinkedIn</a>
+            <a href="mailto:mjc498@drexel.edu">Email</a>
+        </div>
+        <p>&copy; 2025 Maria-Louisa Ching. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .resume-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
