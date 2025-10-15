@@ -6,245 +6,6 @@
     <title>My Work - Maria-Louisa Ching</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
-    <style>
-        .work-hero {
-            background: linear-gradient(135deg, var(--strawberry) 0%, var(--lemon) 100%);
-            padding: 8rem 5% 4rem;
-            margin-top: 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .work-hero::before {
-            content: '✦';
-            position: absolute;
-            top: 10%;
-            right: 15%;
-            font-size: 4rem;
-            color: rgba(255, 255, 255, 0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .work-hero::after {
-            content: '★';
-            position: absolute;
-            bottom: 20%;
-            left: 10%;
-            font-size: 3rem;
-            color: rgba(255, 255, 255, 0.3);
-            animation: float 4s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .work-hero h1 {
-            font-size: 3.5rem;
-            font-family: 'Fredoka', sans-serif;
-            color: var(--brown);
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .work-hero p {
-            font-size: 1.2rem;
-            color: var(--black);
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .work-section {
-            padding: 4rem 0;
-        }
-
-        .work-section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .work-section-header h2 {
-            font-size: 2.5rem;
-            font-family: 'Fredoka', sans-serif;
-            color: var(--brown);
-            margin-bottom: 0.5rem;
-            display: inline-block;
-            position: relative;
-        }
-
-        .work-section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--strawberry), var(--lemon));
-            border-radius: 2px;
-        }
-
-        .work-section-header p {
-            color: var(--black);
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-        }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .work-card {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
-            cursor: pointer;
-            border: 3px solid var(--grey);
-            position: relative;
-        }
-
-        .work-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--strawberry), var(--lemon));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .work-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            border-color: var(--strawberry);
-        }
-
-        .work-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .work-card-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, var(--lemon) 0%, var(--strawberry) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--brown);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .work-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .work-card:hover .work-card-image img {
-            transform: scale(1.1);
-        }
-
-        .work-card-content {
-            padding: 2rem;
-        }
-
-        .work-card-category {
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            background: linear-gradient(135deg, var(--lemon), var(--strawberry));
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--brown);
-            margin-bottom: 1rem;
-        }
-
-        .work-card h3 {
-            font-size: 1.5rem;
-            color: var(--brown);
-            margin-bottom: 0.8rem;
-            font-family: 'Fredoka', sans-serif;
-        }
-
-        .work-card p {
-            color: var(--black);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .work-card-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .work-tag {
-            padding: 0.4rem 1rem;
-            background: var(--grey);
-            border-radius: 15px;
-            font-size: 0.85rem;
-            color: var(--black);
-            font-weight: 600;
-        }
-
-        .work-card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 2px solid var(--grey);
-        }
-
-        .view-project {
-            color: var(--brown);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s ease;
-        }
-
-        .work-card:hover .view-project {
-            gap: 1rem;
-        }
-
-        .section-divider {
-            width: 80%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--strawberry), transparent);
-            margin: 5rem auto;
-            border-radius: 2px;
-        }
-
-        @media (max-width: 768px) {
-            .work-hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .work-section-header h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -254,15 +15,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="my_work.html">My Work</a></li>
             <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <!-- Work Hero -->
-    <div class="work-hero">
-        <h1>My Work</h1>
-        <p>A collection of projects showcasing my journey in UX/UI design and development</p>
-    </div>
 
     <!-- Main Content -->
     <section>
@@ -279,13 +33,12 @@
                         <img src="images/portfolio_linkedin.png" alt="LinkedIn Redesign">
                     </div>
                     <div class="work-card-content">
-                        <span class="work-card-category">UX Design</span>
                         <h3>LinkedIn Redesign</h3>
-                        <p>A 10-week solo redesign of LinkedIn's "Connect" microinteraction, transforming a static button into an engaging, accessible experience.</p>
+                        <p>A 10-week solo redesign of LinkedIn's "Connect" microinteraction, transforming a static button into an engaging, accessible experience through motion design and intuitive user feedback.</p>
                         <div class="work-card-tags">
                             <span class="work-tag">Microinteractions</span>
-                            <span class="work-tag">Front-End Dev</span>
-                            <span class="work-tag">Accessibility</span>
+                            <span class="work-tag">Front-End Development</span>
+                            <span class="work-tag">User-Centered Design</span>
                         </div>
                         <div class="work-card-footer">
                             <span class="view-project">View Case Study →</span>
@@ -295,16 +48,16 @@
 
                 <div class="work-card" onclick="window.location.href='project_ecommerce.html'">
                     <div class="work-card-image">
-                        💻
+                        <img src="images/portfolio_recipebook.png" alt="LinkedIn Redesign">
                     </div>
                     <div class="work-card-content">
-                        <span class="work-card-category">UX/UI Design</span>
-                        <h3>E-Commerce Platform Redesign</h3>
-                        <p>Complete redesign of an e-commerce platform focusing on improving conversion rates and user satisfaction through streamlined checkout flows.</p>
+                        <h3>Recipe Book Website</h3>
+                        <p>A semester-long project exploring modern web design principles through hands-on development, responsive design, and user-focused functionality.</p>
                         <div class="work-card-tags">
-                            <span class="work-tag">User Research</span>
-                            <span class="work-tag">Prototyping</span>
-                            <span class="work-tag">Testing</span>
+                            <span class="work-tag">Back-End Development</span>
+                            <span class="work-tag">Information Architecture</span>
+                            <span class="work-tag">MySQL</span>
+                            <span class="work-tag">PHP</span>
                         </div>
                         <div class="work-card-footer">
                             <span class="view-project">View Case Study →</span>
@@ -314,16 +67,15 @@
 
                 <div class="work-card" onclick="window.location.href='project_banking.html'">
                     <div class="work-card-image">
-                        📱
+                        <img src="images/portfolio_lennox.png" alt="LinkedIn Redesign">
                     </div>
                     <div class="work-card-content">
-                        <span class="work-card-category">Mobile Design</span>
-                        <h3>Mobile Banking Application</h3>
-                        <p>Created a new mobile banking experience focused on simplicity and security with intuitive navigation and personalized insights.</p>
+                        <h3>Lennox Got Lunch App</h3>
+                        <p>A collaborative 10-week project transforming a food truck brand into a fully functional, mobile-responsive web app with interactive animations and accessible user experiences.</p>
                         <div class="work-card-tags">
-                            <span class="work-tag">Mobile UI</span>
-                            <span class="work-tag">Security</span>
-                            <span class="work-tag">iOS/Android</span>
+                            <span class="work-tag">Collaboration</span>
+                            <span class="work-tag">GitHub</span>
+                            <span class="work-tag">Project Management</span>
                         </div>
                         <div class="work-card-footer">
                             <span class="view-project">View Case Study →</span>
@@ -333,9 +85,7 @@
             </div>
         </div>
 
-        <div class="section-divider"></div>
-
-        <!-- Co-Op Experience Section -->
+        <!-- Co-Op -->
         <div class="work-section">
             <div class="work-section-header">
                 <h2>Co-Op Experience</h2>
@@ -345,10 +95,10 @@
             <div class="work-grid">
                 <div class="work-card" onclick="window.location.href='project_nbme.html'">
                     <div class="work-card-image">
-                        🏥
+                        <img src="images/nbme_image.png" alt="LinkedIn Redesign">
                     </div>
                     <div class="work-card-content">
-                        <span class="work-card-category">Digital Marketing</span>
+                        <span class="work-card-category">Digital Marketing Analytics</span>
                         <h3>NBME Accessibility Initiative</h3>
                         <p>Led website accessibility remediation using WCAG guidelines and Axe DevTools, improving digital experiences for all users.</p>
                         <div class="work-card-tags">
@@ -364,7 +114,7 @@
 
                 <div class="work-card" onclick="window.location.href='project_septa.html'">
                     <div class="work-card-image">
-                        🚇
+                        <img src="images/septa_image.jpg" alt="LinkedIn Redesign">
                     </div>
                     <div class="work-card-content">
                         <span class="work-card-category">Web Development</span>
@@ -383,11 +133,11 @@
 
                 <div class="work-card" onclick="window.location.href='project_comcast.html'">
                     <div class="work-card-image">
-                        🤝
+                        <img src="images/comcast_image.jpg" alt="LinkedIn Redesign">
                     </div>
                     <div class="work-card-content">
                         <span class="work-card-category">Research</span>
-                        <h3>Comcast DEI Policy Research</h3>
+                        <h3>Comcast DEI Public Policy</h3>
                         <p>Conducted research to support DEI initiatives, fostering inclusive workplace culture and tracking key diversity metrics.</p>
                         <div class="work-card-tags">
                             <span class="work-tag">Research</span>
@@ -402,91 +152,11 @@
             </div>
         </div>
 
-        <div class="section-divider"></div>
-
-        <!-- Creative Work Section -->
+        <!-- Art -->
         <div class="work-section">
             <div class="work-section-header">
-                <h2>Creative Art & Expression</h2>
+                <h2>Art</h2>
                 <p>Personal projects exploring design, art, and creative experimentation</p>
-            </div>
-            
-            <div class="work-grid">
-                <div class="work-card" onclick="window.location.href='project_recipebook.html'">
-                    <div class="work-card-image">
-                        <img src="images/portfolio_recipebook.png" alt="Recipe Book Website">
-                    </div>
-                    <div class="work-card-content">
-                        <span class="work-card-category">Web Development</span>
-                        <h3>Recipe Book Website</h3>
-                        <p>A semester-long exploration of modern web design principles through hands-on development and database management.</p>
-                        <div class="work-card-tags">
-                            <span class="work-tag">Back-End Dev</span>
-                            <span class="work-tag">MySQL</span>
-                            <span class="work-tag">PHP</span>
-                        </div>
-                        <div class="work-card-footer">
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-card" onclick="window.location.href='project_lennox.html'">
-                    <div class="work-card-image">
-                        <img src="images/portfolio_lennox.png" alt="Lennox Got Lunch App">
-                    </div>
-                    <div class="work-card-content">
-                        <span class="work-card-category">Collaboration</span>
-                        <h3>Lennox Got Lunch App</h3>
-                        <p>A collaborative project transforming a food truck brand into a fully functional, mobile-responsive web app with interactive animations.</p>
-                        <div class="work-card-tags">
-                            <span class="work-tag">Team Project</span>
-                            <span class="work-tag">GitHub</span>
-                            <span class="work-tag">Animation</span>
-                        </div>
-                        <div class="work-card-footer">
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-card" onclick="window.location.href='project_illustration.html'">
-                    <div class="work-card-image">
-                        🎨
-                    </div>
-                    <div class="work-card-content">
-                        <span class="work-card-category">Illustration</span>
-                        <h3>Digital Illustration Series</h3>
-                        <p>A collection of digital illustrations exploring color theory, composition, and storytelling through visual design.</p>
-                        <div class="work-card-tags">
-                            <span class="work-tag">Illustration</span>
-                            <span class="work-tag">Adobe CC</span>
-                            <span class="work-tag">Visual Design</span>
-                        </div>
-                        <div class="work-card-footer">
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-card" onclick="window.location.href='project_branding.html'">
-                    <div class="work-card-image">
-                        ✨
-                    </div>
-                    <div class="work-card-content">
-                        <span class="work-card-category">Brand Design</span>
-                        <h3>Personal Brand Identity</h3>
-                        <p>Development of a cohesive personal brand identity including logo design, color palette, and visual language.</p>
-                        <div class="work-card-tags">
-                            <span class="work-tag">Branding</span>
-                            <span class="work-tag">Identity</span>
-                            <span class="work-tag">Typography</span>
-                        </div>
-                        <div class="work-card-footer">
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
