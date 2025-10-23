@@ -168,35 +168,31 @@
     </footer>
 
     <script>
-        // Dynamic copyright year
+        // Portfolio
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.portfolio-card').forEach(card => {
+                const href = card.getAttribute('data-href');
+                if (!href) return;
+    
+                const navigate = () => (window.location.href = href);
+    
+                card.addEventListener('click', navigate);
+                card.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        navigate();
+                    }
+                });
+            });
+        });
+    
+        // Copyright
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Navbar scroll effect
+    
+        // Navigation
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Work card navigation with keyboard support
-        const workCards = document.querySelectorAll('.work-card');
-        
-        workCards.forEach(card => {
-            const href = card.getAttribute('data-href');
-            
-            const handleNavigation = () => {
-                if (href) {
-                    window.location.href = href;
-                }
-            };
-
-            card.addEventListener('click', handleNavigation);
-            
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    handleNavigation();
-                }
-            });
         });
     </script>
 </body>

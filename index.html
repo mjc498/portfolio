@@ -38,7 +38,12 @@
     <section class="section-divider">
         <h2 class="section-title">Featured Work</h2>
         <div class="portfolio-grid">
-            <article class="portfolio-card" role="button" tabindex="0" data-href="my_work.html" aria-label="View LinkedIn Redesign project">
+            <article 
+            class="portfolio-card" 
+            role="button" 
+            tabindex="0" 
+            data-href="portfolio_linkedin.html" 
+            aria-label="View LinkedIn Redesign project">          
                 <div class="card-image">
                     <img src="images/portfolio_linkedin.jpg" alt="LinkedIn Connect button redesign mockup">
                 </div>
@@ -127,34 +132,31 @@
     </footer>
 
     <script>
+        // Portfolio
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.portfolio-card').forEach(card => {
+                const href = card.getAttribute('data-href');
+                if (!href) return;
+    
+                const navigate = () => (window.location.href = href);
+    
+                card.addEventListener('click', navigate);
+                card.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        navigate();
+                    }
+                });
+            });
+        });
+    
         // Copyright
         document.getElementById('year').textContent = new Date().getFullYear();
-
+    
         // Navigation
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        const workCards = document.querySelectorAll('.work-card');
-        
-        workCards.forEach(card => {
-            const href = card.getAttribute('data-href');
-            
-            const handleNavigation = () => {
-                if (href) {
-                    window.location.href = href;
-                }
-            };
-
-            card.addEventListener('click', handleNavigation);
-            
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    handleNavigation();
-                }
-            });
         });
     </script>
 </body>

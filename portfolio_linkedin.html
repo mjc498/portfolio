@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Maria-Louisa Ching featuring UX/UI design case studies and professional co-op projects.">
+    <meta name="keywords" content="UX Portfolio, UI Design Projects, Case Studies, Co-op Experience">
+    <title>My Work</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="logo">
+            <a href="index.html" aria-label="Home">
+                <img src="images/vector_logo.svg" alt="Maria-Louisa Ching logo" class="nav-logo">
+            </a>
+            MC
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="my_work.html" aria-current="page">My Work</a></li>
+            <li><a href="resume.html">Résumé</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="work-hero">
+        <h1>LinkedIn Redesign</h1>
+    </div>
+
+    <main>
+        <p>bleh</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">LinkedIn</a>
+            <a href="mailto:mjc498@drexel.edu" aria-label="Send email">Email</a>
+            <a href="https://github.com/mjc498" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">GitHub</a>
+        </div>
+        <p>&copy; <span id="year"></span> Maria-Louisa Ching. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Portfolio
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.portfolio-card').forEach(card => {
+                const href = card.getAttribute('data-href');
+                if (!href) return;
+    
+                const navigate = () => (window.location.href = href);
+    
+                card.addEventListener('click', navigate);
+                card.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        navigate();
+                    }
+                });
+            });
+        });
+    
+        // Copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+    
+        // Navigation
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
