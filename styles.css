@@ -515,6 +515,7 @@ main section h3::after {
     left: 0;
     width: 100%;
     height: 4px;
+    background: linear-gradient(90deg, var(--strawberry), var(--lemon));
     border-radius: 2px;
 }
 
@@ -569,29 +570,59 @@ main section h3::after {
     max-width: 700px;
     height: auto;
     border-radius: 12px;
-    border: 3px solid #FFB0B0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     margin: 2rem auto;
     display: block;
 }
 
 .final-gif {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 20px 0;
 }
 
 .final-gif img {
-    border-radius: 12px;
-    width: 200px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border: 3px solid #FFB0B0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--strawberry);
+}
+
+.coding {
+    display: block;               
+    margin: 2rem auto;
+    width: 90%;                  
+    min-width: 300px;             
+    max-width: 600px;              
+    height: auto; 
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--strawberry);
 }
 
 /* ========================================
    Resume Page Sections
    ======================================== */
+.resume-section {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--grey);
+    transition: all 0.3s ease;
+}
+
+.resume-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--strawberry);
+}
+
 .resume-section::before {
     content: '';
     position: absolute;
@@ -747,7 +778,7 @@ main section h3::after {
     background: linear-gradient(135deg, 
                 var(--lemon) 0%, 
                 rgba(255, 176, 176, 0.3) 100%);
-    padding: 4rem;
+    padding: 3.5rem;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
