@@ -114,7 +114,7 @@ section.hero {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('images/hero_image.jpg');
+                url('images/hero_image.JPG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -263,7 +263,7 @@ main section {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
+    width: 80%;
     height: 2px;
     background: var(--strawberry);
 }
@@ -494,8 +494,121 @@ main section {
 }
 
 /* ========================================
+   Case Study Pages
+   ======================================== */
+main section h3 {
+    font-size: 2.5rem;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--brown);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--strawberry), var(--lemon));
+    border-radius: 2px;
+}
+
+.text-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.text-container h4 {
+    font-size: 1.5rem;
+    color: var(--brown);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.text-container ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    list-style-type: disc;
+}
+
+.text-container li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.text-container a {
+    color: var(--brown);
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.text-container a:hover,
+.text-container a:focus {
+    color: var(--strawberry);
+}
+
+/* Case Study Images */
+.user-persona {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #FFB0B0;
+    margin: 2rem auto;
+    display: block;
+}
+
+.final-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.final-gif img {
+    border-radius: 12px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #FFB0B0;
+}
+
+/* ========================================
    Resume Page Sections
    ======================================== */
+.resume-section {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--grey);
+    transition: all 0.3s ease;
+}
+
+.resume-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--strawberry);
+}
 
 .resume-section::before {
     content: '';
@@ -504,10 +617,11 @@ main section {
     left: 0;
     width: 6px;
     height: 100%;
+    background: linear-gradient(180deg, var(--strawberry), var(--lemon));
 }
 
 .resume-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: 'Fredoka', sans-serif;
     color: var(--brown);
     margin-bottom: 2rem;
@@ -620,9 +734,8 @@ main section {
 
 /* Download Resume Button */
 .download-resume {
-    display: flex;
-    justify-content: center;
-    width: 100%; 
+    text-align: center;
+    margin: 3rem 0;
 }
 
 .download-button {
@@ -644,8 +757,6 @@ main section {
     color: var(--brown);
     border: 3px solid var(--brown);
 }
-
-
 
 /* ========================================
    Testimonial Component
@@ -689,7 +800,7 @@ main section {
     font-size: 1.1rem;
     font-style: italic;
     color: var(--black);
-    margin: 1.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
@@ -724,16 +835,23 @@ footer {
 
 .social-links a {
     color: var(--white);
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .social-links a:hover,
 .social-links a:focus {
     color: var(--strawberry);
-    transform: translateY(-3px);
+    background: var(--white);
+    transform: translateY(-5px) scale(1.1);
 }
 
 /* ========================================
