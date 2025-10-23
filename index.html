@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria-Louisa Ching</title>
+    <meta name="description" content="Maria-Louisa Ching - UX/UI Design student at Drexel University passionate about creating intuitive, inclusive digital experiences.">
+    <meta name="keywords" content="UX Design, UI Design, Portfolio, Drexel University, Web Design">
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo"><a href="index.html"><img src="images/vector_logo.svg" alt="Logo" class="nav-logo"></a>  MC</div>
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="logo">
+            <a href="index.html" aria-label="Home">
+                <img src="images/vector_logo.svg" alt="Maria-Louisa Ching logo" class="nav-logo">
+            </a>
+            MC
+        </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="my_work.html">My Work</a></li>
-            <li><a href="resume.html">Resume</a></li>
+            <li><a href="resume.html">Résumé</a></li>
         </ul>
     </nav>
 
-    <!-- Home -->
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
             <h1>Maria-Louisa Ching</h1>
@@ -27,41 +34,50 @@
         </div>
     </section>
 
+    <!-- Featured Work -->
     <section class="section-divider">
         <h2 class="section-title">Featured Work</h2>
         <div class="portfolio-grid">
-            <div class="portfolio-card">
+            <article class="portfolio-card" role="button" tabindex="0" data-href="my_work.html" aria-label="View LinkedIn Redesign project">
                 <div class="card-image">
-                    <img src="images/portfolio_linkedin.png" alt="LinkedIn Redesign">
+                    <img src="images/portfolio_linkedin.jpg" alt="LinkedIn Connect button redesign mockup">
                 </div>
                 <div class="card-content">
                     <h3>LinkedIn Redesign</h3>
-                    <p>A 10-week solo redesign of LinkedIn's "Connect" microinteraction, transforming a static button into an engaging, accessible experience through motion design and intuitive user feedback.</p>
+                    <p>A 10-week solo redesign of LinkedIn's "Connect" microinteraction, transforming a static button into an engaging, accessible experience!</p>
                     <div class="card-tags">
-                        <span class="tag">Microinteractions</span>
                         <span class="tag">Front-End Development</span>
+                        <span class="tag">Microinteractions</span>
                         <span class="tag">User-Centered Design</span>
                     </div>
+                    <div class="card-footer">
+                        <span class="view-project">View Case Study →</span>
+                    </div>
                 </div>
-            </div>
-            <div class="portfolio-card">
+            </article>
+
+            <article class="portfolio-card" role="button" tabindex="0" data-href="my_work.html" aria-label="View Recipe Book Website project">
                 <div class="card-image">
-                    <img src="images/portfolio_recipebook.png" alt="Recipe Book Website">
+                    <img src="images/portfolio_recipebook.jpg" alt="Recipe book website interface">
                 </div>
                 <div class="card-content">
                     <h3>Recipe Book Website</h3>
-                    <p>A semester-long project exploring modern web design principles through hands-on development, responsive design, and user-focused functionality.</p>
+                    <p>A semester-long project exploring modern web design principles through hands-on development, responsive design, and user-focused functionality with real recipes!</p>
                     <div class="card-tags">
                         <span class="tag">Back-End Development</span>
-                        <span class="tag">Information Architecture</span>
+                        <span class="tag">WordPress</span>
                         <span class="tag">MySQL</span>
                         <span class="tag">PHP</span>
                     </div>
+                    <div class="card-footer">
+                        <span class="view-project">View Case Study →</span>
+                    </div>
                 </div>
-            </div>
-            <div class="portfolio-card">
+            </article>
+
+            <article class="portfolio-card" role="button" tabindex="0" data-href="my_work.html" aria-label="View Lennox Got Lunch App project">
                 <div class="card-image">
-                    <img src="images/portfolio_lennox.png" alt="Lennox Got Lunch App">  
+                    <img src="images/portfolio_lennox.jpg" alt="Lennox Got Lunch mobile app interface">  
                 </div>
                 <div class="card-content">
                     <h3>Lennox Got Lunch App</h3>
@@ -71,8 +87,11 @@
                         <span class="tag">GitHub</span>
                         <span class="tag">Project Management</span>
                     </div>
+                    <div class="card-footer">
+                        <span class="view-project">View Case Study →</span>
+                    </div>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
@@ -80,15 +99,18 @@
     <section class="section-divider">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>👋 I am a fourth-year UX/UI student at Drexel University in the 5-year, 3 co-op program. I'm passionate about designing intuitive, inclusive digital experiences that connect creativity with human behavior. My interests lie at the intersection of psychology, technology, and design.</p>
-            <p>🗺️ When I'm not designing, you can find me exploring around Philly, reading fiction, or experimenting with the latest design tools!</p>
+            <p>I am a fourth-year UX/UI student at Drexel University in the 5-year, 3 co-op program. I'm passionate about designing intuitive, inclusive digital experiences that connect creativity with human behavior. My interests lie at the intersection of psychology, technology, and design.</p>
+            <p>When I'm not designing, you can find me exploring around Philly, reading fiction, or experimenting with the latest design tools!</p>
         </div>
     </section>
 
-    <section>
+    <!-- What People Say -->
+    <section class="section-divider">
         <h2 class="section-title">What People Say</h2>
         <div class="testimonial">
-            <p class="testimonial-text">Maria demonstrated a strong work ethic, technical aptitude, and genuine enthusiasm for her projects. She stands out for her curiosity, collaborative spirit, clear communication, and thoughtful approach to problem-solving. She's a quiet leader who consistently delivers quality work and builds strong connections—I highly recommend her for any future opportunity [...]</p>
+            <blockquote>
+                <p class="testimonial-text">Maria demonstrated a strong work ethic, technical aptitude, and genuine enthusiasm for her projects. She stands out for her curiosity, collaborative spirit, clear communication, and thoughtful approach to problem-solving. She's a quiet leader who consistently delivers quality work and builds strong connections—I highly recommend her for any future opportunity.</p>
+            </blockquote>
             <p class="testimonial-author">Charisse Smith</p>
             <p class="testimonial-role">Director of Marketing Operations, NBME</p>
         </div>
@@ -97,48 +119,41 @@
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank">LinkedIn</a>
-            <a href="mailto:mjc498@drexel.edu">Email</a>
-            <a href="https://github.com/mjc498" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">LinkedIn</a>
+            <a href="mailto:mjc498@drexel.edu" aria-label="Send email">Email</a>
+            <a href="https://github.com/mjc498" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">GitHub</a>
         </div>
-        <p>&copy; 2025 Maria-Louisa Ching. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Maria-Louisa Ching. All rights reserved.</p>
     </footer>
 
     <script>
+        // Copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navigation
         const navbar = document.getElementById('navbar');
-
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+        const workCards = document.querySelectorAll('.work-card');
+        
+        workCards.forEach(card => {
+            const href = card.getAttribute('data-href');
+            
+            const handleNavigation = () => {
+                if (href) {
+                    window.location.href = href;
                 }
-            });
-        }, observerOptions);
+            };
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Portfolio card click to navigate
-        const portfolioCards = document.querySelectorAll('.portfolio-card');
-        portfolioCards.forEach(card => {
-            card.addEventListener('click', () => {
-                window.location.href = 'my_work.html';
+            card.addEventListener('click', handleNavigation);
+            
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleNavigation();
+                }
             });
         });
     </script>

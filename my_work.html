@@ -3,34 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Maria-Louisa Ching featuring UX/UI design case studies and professional co-op projects.">
+    <meta name="keywords" content="UX Portfolio, UI Design Projects, Case Studies, Co-op Experience">
     <title>My Work - Maria-Louisa Ching</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
 </head>
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo"><a href="index.html"><img src="images/vector_logo.svg" alt="Logo" class="nav-logo"></a>  MC</div>
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="logo">
+            <a href="index.html" aria-label="Home">
+                <img src="images/vector_logo.svg" alt="Maria-Louisa Ching logo" class="nav-logo">
+            </a>
+            MC
+        </div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="my_work.html">My Work</a></li>
+            <li><a href="my_work.html" aria-current="page">My Work</a></li>
             <li><a href="resume.html">Resume</a></li>
         </ul>
     </nav>
 
+    <!-- Work Hero -->
+    <div class="work-hero">
+        <h1>My Work</h1>
+        <p>Explore my design projects and professional experiences</p>
+    </div>
+
     <!-- Main Content -->
-    <section>
+    <main>
         <!-- Case Studies Section -->
-        <div class="work-section">
+        <section class="work-section">
             <div class="work-section-header">
                 <h2>Case Studies</h2>
                 <p>In-depth explorations of design challenges and solutions</p>
             </div>
             
             <div class="work-grid">
-                <div class="work-card" onclick="window.location.href='project_linkedin.html'">
+                <article class="work-card" role="button" tabindex="0" data-href="project_linkedin.html" aria-label="View LinkedIn Redesign case study">
                     <div class="work-card-image">
-                        <img src="images/portfolio_linkedin.png" alt="LinkedIn Redesign">
+                        <img src="images/portfolio_linkedin.png" alt="LinkedIn Connect button redesign mockup">
                     </div>
                     <div class="work-card-content">
                         <h3>LinkedIn Redesign</h3>
@@ -44,11 +57,11 @@
                             <span class="view-project">View Case Study →</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="work-card" onclick="window.location.href='project_ecommerce.html'">
+                <article class="work-card" role="button" tabindex="0" data-href="project_ecommerce.html" aria-label="View Recipe Book Website case study">
                     <div class="work-card-image">
-                        <img src="images/portfolio_recipebook.png" alt="LinkedIn Redesign">
+                        <img src="images/portfolio_recipebook.png" alt="Recipe book website interface">
                     </div>
                     <div class="work-card-content">
                         <h3>Recipe Book Website</h3>
@@ -63,11 +76,11 @@
                             <span class="view-project">View Case Study →</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="work-card" onclick="window.location.href='project_banking.html'">
+                <article class="work-card" role="button" tabindex="0" data-href="project_banking.html" aria-label="View Lennox Got Lunch App case study">
                     <div class="work-card-image">
-                        <img src="images/portfolio_lennox.png" alt="LinkedIn Redesign">
+                        <img src="images/portfolio_lennox.png" alt="Lennox Got Lunch mobile app interface">
                     </div>
                     <div class="work-card-content">
                         <h3>Lennox Got Lunch App</h3>
@@ -81,21 +94,21 @@
                             <span class="view-project">View Case Study →</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <!-- Co-Op -->
-        <div class="work-section">
+        <!-- Co-Op Experience -->
+        <section class="work-section">
             <div class="work-section-header">
                 <h2>Co-Op Experience</h2>
                 <p>Real-world projects from my professional internships</p>
             </div>
             
             <div class="work-grid">
-                <div class="work-card" onclick="window.location.href='project_nbme.html'">
+                <article class="work-card" role="button" tabindex="0" data-href="project_nbme.html" aria-label="View NBME Accessibility Initiative project">
                     <div class="work-card-image">
-                        <img src="images/nbme_image.png" alt="LinkedIn Redesign">
+                        <img src="images/nbme_image.png" alt="NBME accessibility project screenshot">
                     </div>
                     <div class="work-card-content">
                         <span class="work-card-category">Digital Marketing Analytics</span>
@@ -110,11 +123,11 @@
                             <span class="view-project">View Project →</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="work-card" onclick="window.location.href='project_septa.html'">
+                <article class="work-card" role="button" tabindex="0" data-href="project_septa.html" aria-label="View SEPTA Web Content Management project">
                     <div class="work-card-image">
-                        <img src="images/septa_image.jpg" alt="LinkedIn Redesign">
+                        <img src="images/septa_image.jpg" alt="SEPTA web content management project">
                     </div>
                     <div class="work-card-content">
                         <span class="work-card-category">Web Development</span>
@@ -129,11 +142,11 @@
                             <span class="view-project">View Project →</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="work-card" onclick="window.location.href='project_comcast.html'">
+                <article class="work-card" role="button" tabindex="0" data-href="project_comcast.html" aria-label="View Comcast DEI Public Policy project">
                     <div class="work-card-image">
-                        <img src="images/comcast_image.jpg" alt="LinkedIn Redesign">
+                        <img src="images/comcast_image.jpg" alt="Comcast DEI research project">
                     </div>
                     <div class="work-card-content">
                         <span class="work-card-category">Research</span>
@@ -148,56 +161,62 @@
                             <span class="view-project">View Project →</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <!-- Art -->
-        <div class="work-section">
+        <!-- Art Section -->
+        <section class="work-section">
             <div class="work-section-header">
                 <h2>Art</h2>
                 <p>Personal projects exploring design, art, and creative experimentation</p>
             </div>
-        </div>
-    </section>
+            <div class="coming-soon">
+                <p>Coming soon! Check back for creative explorations and personal projects.</p>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank">LinkedIn</a>
-            <a href="mailto:mjc498@drexel.edu">Email</a>
+            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">LinkedIn</a>
+            <a href="mailto:mjc498@drexel.edu" aria-label="Send email">Email</a>
+            <a href="https://github.com/mjc498" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">GitHub</a>
         </div>
-        <p>&copy; 2025 Maria-Louisa Ching. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Maria-Louisa Ching. All rights reserved.</p>
     </footer>
 
     <script>
-        const navbar = document.getElementById('navbar');
+        // Dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
 
         // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Work card navigation with keyboard support
+        const workCards = document.querySelectorAll('.work-card');
+        
+        workCards.forEach(card => {
+            const href = card.getAttribute('data-href');
+            
+            const handleNavigation = () => {
+                if (href) {
+                    window.location.href = href;
+                }
+            };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+            card.addEventListener('click', handleNavigation);
+            
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleNavigation();
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.work-section').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>

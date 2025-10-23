@@ -6,10 +6,11 @@
     --strawberry: #FFB0B0;
     --lemon: #FFFACD;
     --white: #FAFAFA;
-    --grey:#E8E8E8;
+    --grey: #E8E8E8;
     --black: #333333;
 }
 
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@ body {
     line-height: 1.6;
 }
 
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -33,7 +35,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: padding 0.3s ease;
 }
 
 nav.scrolled {
@@ -44,8 +46,15 @@ nav.scrolled {
     font-family: 'Fredoka', sans-serif;
     font-size: 1.5rem;
     color: var(--brown);
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: transform 0.3s ease;
+}
+
+.logo a {
+    display: inline-flex;
+    align-items: center;
 }
 
 .logo:hover {
@@ -53,9 +62,8 @@ nav.scrolled {
 }
 
 .nav-logo {
-    width: 20px; 
+    width: 20px;
     height: auto;
-    transition: transform 0.3s ease;
 }
 
 .nav-links {
@@ -83,15 +91,17 @@ nav.scrolled {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
     color: var(--strawberry);
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a:focus::after {
     width: 100%;
 }
 
-/* Hero Section */
+/* Hero (Home) */
 section.hero {
     padding: 0;
     max-width: none;
@@ -103,7 +113,8 @@ section.hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero_image.JPG');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('images/hero_image.JPG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -112,24 +123,17 @@ section.hero {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     text-align: left;
     animation: fadeInUp 1s ease;
     padding: 0 2.5%;
 }
 
 .hero h1 {
-    font-size: 82px;
+    font-size: 5.125rem;
     margin-bottom: 1rem;
-    font-family: 'fredoka', sans-serif;
+    font-family: 'Fredoka', sans-serif;
     color: var(--white);
-}
-
-.hero h2 {
-    font-size: 1.8rem;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    font-weight: 400;
 }
 
 .hero p {
@@ -149,277 +153,18 @@ section.hero {
     transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-    transform: translateY(-3px);
+.cta-button:hover,
+.cta-button:focus {
+    transform: translateY(-1px);
     background: var(--white);
     color: var(--brown);
     border: 2px solid var(--brown);
 }
 
-/* Section Styles */
-section {
-    padding: 6rem 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-size: 48px;
-    font-family: 'fredoka', sans-serif;
-    margin-bottom: 3rem;
-    text-align: center;
-    color: var(--black);
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    margin: 1rem auto;
-}
-
-/* Portfolio Grid */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
-}
-
-.portfolio-card {
-    background: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: all 0.4s ease;
-    cursor: pointer;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-}
-
-.card-image {
-    width: 100%;
-    height: 250px;
-    background: linear-gradient(135deg, var(--strawberry), var(--white));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: var(--white);
-    font-weight: 600;
-    transition: transform 0.4s ease;
-}
-
-.portfolio-card:hover .card-image {
-    transform: scale(1.05);
-}
-
-.card-content {
-    padding: 2rem;
-}
-
-.card-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
-    color: var(--brown);
-}
-
-.card-content p {
-    color: var(--black);
-    margin-bottom: 1rem;
-}
-
-.card-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.tag {
-    padding: 0.3rem 0.8rem;
-    background: var(--grey);
-    border-radius: 20px;
-    font-size: 0.85rem;
-    color: var(--black);
-    font-weight: 500;
-}
-
-/* Case Study */
-.case-study {
-    background: var(--white);
-    padding: 4rem;
-    border-radius: 12px;
-    margin-bottom: 3rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.case-study-header {
-    margin-bottom: 2rem;
-}
-
-.case-study-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--dark);
-}
-
-.case-study-meta {
-    display: flex;
-    gap: 2rem;
-    color: #666;
-    margin-bottom: 2rem;
-}
-
-.case-study-image {
-    width: 100%;
-    height: 400px;
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 1.5rem;
-    margin: 2rem 0;
-}
-
-.case-study-section {
-    margin: 3rem 0;
-}
-
-.case-study-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
-}
-
-/* About */
-.about-section {
-    padding: 4rem;
-    border-radius: 12px;
-    max-width: 900px;
-    margin: 0 auto 4rem;
-}
-
-.about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: var(--black);
-}
-
-.about-content p:last-child {
-    margin-bottom: 0;
-}
-
-.section-divider {
-    padding-bottom: 6rem;
-    position: relative;
-}
-
-.section-divider::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;  
-    height: 2px;
-    background: var(--strawberry);
-}
-
-.section-divider:last-of-type::after {
-    display: none;
-}
-
-/* Testimonial */
-.testimonial {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    /* margin: 4rem 0; */
-    position: relative;
-}
-
-.testimonial::before {
-    content: '"';
-    font-size: 6rem;
-    color: var(--strawberry);
-    position: absolute;
-    top: -20px;
-    left: 30px;
-    opacity: 0.3;
-}
-
-.testimonial-text {
-    font-size: 1.3rem;
-    font-style: italic;
-    color: var(--black);
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-}
-
-.testimonial-author {
-    font-weight: 600;
-    color: var(--black);
-    font-size: 1.1rem;
-}
-
-.testimonial-role {
-    color: var(--brown);
-    font-size: 0.95rem;
-}
-
-/* Artwork Gallery */
-.artwork-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.artwork-item {
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    position: relative;
-}
-
-.artwork-item::after {
-    content: 'View';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(184, 92, 56, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.artwork-item:hover::after {
-    opacity: 1;
-}
-
-/* Case Studies */
-.work-hero {
-    background: linear-gradient(135deg, var(--strawberry) 0%, var(--lemon) 100%);
+/* Hero (Work & Resume) */
+.work-hero,
+.resume-hero {
+    background: linear-gradient(135deg, var(--lemon) 0%, var(--strawberry) 100%);
     padding: 8rem 5% 4rem;
     margin-top: 80px;
     text-align: center;
@@ -427,6 +172,27 @@ section {
     overflow: hidden;
 }
 
+.work-hero h1,
+.resume-hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--brown);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.work-hero p,
+.resume-hero p {
+    font-size: 1.2rem;
+    color: var(--black);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Decorative elements for work hero */
 .work-hero::before {
     content: '✦';
     position: absolute;
@@ -447,29 +213,229 @@ section {
     animation: float 4s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+/* Decorative elements for resume hero */
+.resume-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
 }
 
-.work-hero h1 {
-    font-size: 3.5rem;
+.resume-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+/* Section Styles */
+section,
+main section {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3rem;
     font-family: 'Fredoka', sans-serif;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--black);
+}
+
+.section-divider {
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+.section-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: var(--strawberry);
+}
+
+.section-divider:last-of-type::after {
+    display: none;
+}
+
+/* ========================================
+   UNIFIED CARD COMPONENT
+   Used for: Portfolio Grid & Work Grid
+   ======================================== */
+
+/* Grid Containers */
+.portfolio-grid,
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card Styles */
+.portfolio-card,
+.work-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 3px solid var(--grey);
+    position: relative;
+}
+
+.portfolio-card::before,
+.work-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--strawberry), var(--lemon));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus,
+.work-card:hover,
+.work-card:focus {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--strawberry);
+    outline: none;
+}
+
+.portfolio-card:hover::before,
+.portfolio-card:focus::before,
+.work-card:hover::before,
+.work-card:focus::before {
+    transform: scaleX(1);
+}
+
+/* Card Image */
+.card-image,
+.work-card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img,
+.work-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .card-image img,
+.portfolio-card:focus .card-image img,
+.work-card:hover .work-card-image img,
+.work-card:focus .work-card-image img {
+    transform: scale(1.1);
+}
+
+/* Card Content */
+.card-content,
+.work-card-content {
+    padding: 2rem;
+}
+
+.card-content h3,
+.work-card h3 {
+    font-size: 1.5rem;
+    color: var(--brown);
+    margin-bottom: 0.8rem;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.card-content p,
+.work-card p {
+    color: var(--black);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Card Tags */
+.card-tags,
+.work-card-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag,
+.work-tag {
+    padding: 0.4rem 1rem;
+    background: var(--grey);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: var(--black);
+    font-weight: 600;
+}
+
+/* Card Footer (for work cards with "View Project" link) */
+.card-footer,
+.work-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--grey);
+}
+
+.view-project {
+    color: var(--brown);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+}
+
+.portfolio-card:hover .view-project,
+.portfolio-card:focus .view-project,
+.work-card:hover .view-project,
+.work-card:focus .view-project {
+    gap: 1rem;
+}
+
+/* Card Category Badge (for work cards) */
+.work-card-category {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: linear-gradient(135deg, var(--lemon), var(--strawberry));
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
     color: var(--brown);
     margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
 }
 
-.work-hero p {
-    font-size: 1.2rem;
-    color: var(--black);
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
+/* ========================================
+   Work Page Sections
+   ======================================== */
 .work-section {
     padding: 4rem 0;
 }
@@ -505,199 +471,31 @@ section {
     margin-top: 1.5rem;
 }
 
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.work-card {
-    background: var(--white);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    transition: all 0.4s ease;
-    cursor: pointer;
-    border: 3px solid var(--grey);
-    position: relative;
-}
-
-.work-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--strawberry), var(--lemon));
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
-}
-
-.work-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border-color: var(--strawberry);
-}
-
-.work-card:hover::before {
-    transform: scaleX(1);
-}
-
-.work-card-image {
-    width: 100%;
-    height: 250px;
-    background: linear-gradient(135deg, var(--lemon) 0%, var(--strawberry) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--brown);
-    position: relative;
-    overflow: hidden;
-}
-
-.work-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.work-card:hover .work-card-image img {
-    transform: scale(1.1);
-}
-
-.work-card-content {
-    padding: 2rem;
-}
-
-.work-card-category {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    background: linear-gradient(135deg, var(--lemon), var(--strawberry));
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--brown);
-    margin-bottom: 1rem;
-}
-
-.work-card h3 {
-    font-size: 1.5rem;
-    color: var(--brown);
-    margin-bottom: 0.8rem;
-    font-family: 'Fredoka', sans-serif;
-}
-
-.work-card p {
-    color: var(--black);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.work-card-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.work-tag {
-    padding: 0.4rem 1rem;
-    background: var(--grey);
-    border-radius: 15px;
-    font-size: 0.85rem;
-    color: var(--black);
-    font-weight: 600;
-}
-
-.work-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 2px solid var(--grey);
-}
-
-.view-project {
-    color: var(--brown);
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: gap 0.3s ease;
-}
-
-.work-card:hover .view-project {
-    gap: 1rem;
-}
-
-@media (max-width: 768px) {
-    .work-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .work-section-header h2 {
-        font-size: 2rem;
-    }
-}
-
-/* Resume Section */
-.resume-hero {
-    background: linear-gradient(135deg, var(--lemon) 0%, var(--strawberry) 100%);
-    padding: 8rem 5% 4rem;
-    margin-top: 80px;
+/* Coming soon placeholder */
+.coming-soon {
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.resume-hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-}
-
-.resume-hero::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -5%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-}
-
-.resume-hero h1 {
-    font-size: 3.5rem;
-    font-family: 'Fredoka', sans-serif;
-    color: var(--brown);
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
-}
-
-.resume-hero p {
-    font-size: 1.2rem;
+    padding: 3rem;
     color: var(--black);
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
+    font-size: 1.1rem;
 }
 
+/* ========================================
+   About Section (Index Page)
+   ======================================== */
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   Resume Page Sections
+   ======================================== */
 .resume-section {
     background: var(--white);
     padding: 3rem;
@@ -711,7 +509,7 @@ section {
 
 .resume-section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     border-color: var(--strawberry);
 }
 
@@ -725,7 +523,7 @@ section {
     background: linear-gradient(180deg, var(--strawberry), var(--lemon));
 }
 
-.resume-section h3 {
+.resume-section h2 {
     font-size: 2rem;
     font-family: 'Fredoka', sans-serif;
     color: var(--brown);
@@ -735,7 +533,7 @@ section {
     gap: 1rem;
 }
 
-.resume-section h3::before {
+.resume-section h2::before {
     content: '✦';
     color: var(--strawberry);
     font-size: 1.5rem;
@@ -744,14 +542,18 @@ section {
 .resume-item {
     margin-bottom: 2.5rem;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(255, 250, 205, 0.3) 0%, rgba(255, 176, 176, 0.2) 100%);
+    background: linear-gradient(135deg, 
+                rgba(255, 250, 205, 0.3) 0%, 
+                rgba(255, 176, 176, 0.2) 100%);
     border-radius: 15px;
     border-left: 4px solid var(--strawberry);
-    transition: all 0.3s ease;
-    position: relative;
 }
 
-.resume-item h4 {
+.resume-item:last-child {
+    margin-bottom: 0;
+}
+
+.resume-item h3 {
     font-size: 1.5rem;
     color: var(--brown);
     margin-bottom: 0.5rem;
@@ -774,11 +576,22 @@ section {
 }
 
 .resume-item p {
-    margin-left: 1.5rem;
     line-height: 1.8;
     color: var(--black);
 }
 
+.resume-item ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.resume-item li {
+    line-height: 1.8;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+/* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -822,12 +635,43 @@ section {
     left: 0;
 }
 
+/* Download Resume Button */
+.download-resume {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background: var(--brown);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover,
+.download-button:focus {
+    transform: translateY(-5px) scale(1.05);
+    background: var(--white);
+    color: var(--brown);
+    border: 3px solid var(--brown);
+}
+
+/* ========================================
+   Testimonial Component
+   ======================================== */
 .testimonial {
-    background: linear-gradient(135deg, var(--lemon) 0%, rgba(255, 176, 176, 0.3) 100%);
+    background: linear-gradient(135deg, 
+                var(--lemon) 0%, 
+                rgba(255, 176, 176, 0.3) 100%);
     padding: 3.5rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     position: relative;
     border: 3px solid var(--strawberry);
     margin-top: 3rem;
@@ -855,117 +699,33 @@ section {
     font-family: 'Fredoka', sans-serif;
 }
 
-.download-resume {
-    text-align: center;
-    margin: 3rem 0;
-}
-
-.download-button {
-    display: inline-block;
-    padding: 1.2rem 3rem;
-    background: var(--brown);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 700;
+.testimonial-text {
     font-size: 1.1rem;
-    transition: all 0.3s ease;
+    font-style: italic;
+    color: var(--black);
+    margin: 1.5rem;
+    line-height: 1.8;
 }
 
-.download-button:hover {
-    transform: translateY(-5px) scale(1.05);
-    background: var(--white);
+.testimonial-author {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 1.1rem;
+}
+
+.testimonial-role {
     color: var(--brown);
-    border: 3px solid var(--brown);
+    font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
-    .resume-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .resume-section {
-        padding: 2rem;
-    }
-
-    .resume-item::after {
-        display: none;
-    }
-}
-
-/* Contact Form */
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--dark);
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--light);
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.submit-button {
-    width: 100%;
-    padding: 1rem;
-    background: var(--primary);
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.submit-button:hover {
-    background: #A04F30;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(184, 92, 56, 0.3);
-}
-
-/* Footer */
+/* ========================================
+   Footer
+   ======================================== */
 footer {
-    background: var(--brown); 
+    background: var(--brown);
     color: var(--white);
     text-align: center;
     padding: 2rem 5%;
-    position: relative;
-    z-index: 1;
     margin-top: 4rem;
 }
 
@@ -978,17 +738,21 @@ footer {
 
 .social-links a {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
-.social-links a:hover {
-    color: var(--strawberry); 
+.social-links a:hover,
+.social-links a:focus {
+    color: var(--strawberry);
     transform: translateY(-3px);
 }
 
-/* Animations */
+/* ========================================
+   Animations
+   ======================================== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1000,21 +764,18 @@ footer {
     }
 }
 
-.fade-in {
-    animation: fadeInUp 0.8s ease;
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
-/* Page Transitions */
-.page {
-    display: none;
-}
-
-.page.active {
-    display: block;
-    animation: fadeInUp 0.6s ease;
-}
-
-/* Responsive */
+/* ========================================
+   Responsive Design
+   ======================================== */
 @media (max-width: 768px) {
     .nav-links {
         gap: 1rem;
@@ -1024,19 +785,39 @@ footer {
         font-size: 2.5rem;
     }
 
-    .hero h2 {
-        font-size: 1.3rem;
+    .hero p {
+        font-size: 1rem;
     }
 
-    .portfolio-grid {
+    .work-hero h1,
+    .resume-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .portfolio-grid,
+    .work-grid {
         grid-template-columns: 1fr;
     }
 
-    .case-study {
+    .work-section-header h2 {
+        font-size: 2rem;
+    }
+
+    section,
+    main section {
+        padding: 4rem 5%;
+    }
+
+    .resume-section {
         padding: 2rem;
     }
 
-    section {
-        padding: 4rem 5%;
+    .testimonial {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .testimonial::before,
+    .testimonial::after {
+        font-size: 4rem;
     }
 }
