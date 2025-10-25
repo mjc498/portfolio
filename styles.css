@@ -496,7 +496,7 @@ main section {
 /* ========================================
    Case Study Pages
    ======================================== */
-main section h3 {
+main section h3:not(.card-content h3):not(.work-card-content h3) {
     font-size: 2.5rem;
     font-family: 'Fredoka', sans-serif;
     color: var(--brown);
@@ -577,7 +577,7 @@ main section h3::after {
 
 .final-gif {
     width: 100%;
-    max-width: 800px;
+    max-width: 200px;
     margin: 2rem auto;
     display: flex;
     justify-content: center;
@@ -606,23 +606,6 @@ main section h3::after {
 /* ========================================
    Resume Page Sections
    ======================================== */
-.resume-section {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 20px;
-    margin-bottom: 2.5rem;
-    position: relative;
-    overflow: hidden;
-    border: 3px solid var(--grey);
-    transition: all 0.3s ease;
-}
-
-.resume-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    border-color: var(--strawberry);
-}
-
 .resume-section::before {
     content: '';
     position: absolute;
@@ -848,7 +831,7 @@ footer {
 
 .social-links a {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-flex;
@@ -856,15 +839,11 @@ footer {
     justify-content: center;
     width: 45px;
     height: 45px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
 }
 
 .social-links a:hover,
 .social-links a:focus {
     color: var(--strawberry);
-    background: var(--white);
-    transform: translateY(-5px) scale(1.1);
 }
 
 /* ========================================
@@ -937,4 +916,16 @@ footer {
     .testimonial::after {
         font-size: 4rem;
     }
+}
+
+/* Inline code styling */
+code {
+    background: var(--grey);
+    color: var(--brown);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    font-weight: 600;
+    border: 1px solid rgba(139, 69, 19, 0.2);
 }

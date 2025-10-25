@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Maria-Louisa Ching featuring UX/UI design case studies and professional co-op projects.">
     <meta name="keywords" content="UX Portfolio, UI Design Projects, Case Studies, Co-op Experience">
-    <title>My Work - LinkedIn Redesign</title>
+    <title>My Work - RecipeBook Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -110,13 +110,13 @@
                 <p>
                     Establishing a database connection between PHP and MySQL was essential to making the "Recipe Book" website dynamic and interactive. 
                     This connection enabled PHP scripts to retrieve, filter, and display recipe data in real-time. By specifying the database host, 
-                    username, password, and name, I created the connection using the new <strong>mysqli</strong> function, with error handling to catch 
+                    username, password, and name, I created the connection using the new <code>mysqli</code> function, with error handling to catch 
                     any issues.
                 </p>
                 <img src="images/recipebook_code01.png" alt="code displaying MySQL database in connection to PHP" class="coding">
 
                 <p>
-                    After connecting the database, I created a separate database connection file (db_connection.php) to ensure reusable code for the "Recipes" page and the "Recipe - Details" page. The first SQL query (SELECT * FROM final_recipes_list) fetches all recipes and is adjusted based on user inputs through search functions or selected filters. The real_escape_string function is used to protect against SQL interception. Filters are applied  only when specified, ensuring the query remains efficient. The results stored in an array, making it easy to display the filtered recipes dynamically on the website.
+                    After connecting the database, I created a separate database connection file (db_connection.php) to ensure reusable code for the "Recipes" page and the "Recipe - Details" page. The first SQL query <code>SELECT * FROM final_recipes_list</code> fetches all recipes and is adjusted based on user inputs through search functions or selected filters. The real_escape_string function is used to protect against SQL interception. Filters are applied  only when specified, ensuring the query remains efficient. The results stored in an array, making it easy to display the filtered recipes dynamically on the website.
                 </p>
                 <img src="images/recipebook_code02.png" alt="code displaying MySQL database in connection to PHP" class="coding">
             </div>

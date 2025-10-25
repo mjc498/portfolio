@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Maria-Louisa Ching featuring UX/UI design case studies and professional co-op projects.">
+    <meta name="keywords" content="UX Portfolio, UI Design Projects, Case Studies, Co-op Experience">
+    <title>My Work - Comcast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="logo">
+            <a href="index.html" aria-label="Home">
+                <img src="images/vector_logo.svg" alt="Maria-Louisa Ching logo" class="nav-logo">
+            </a>
+            MC
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="my_work.html" aria-current="page">My Work</a></li>
+            <li><a href="resume.html">Résumé</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="work-hero">
+        <h1>Comcast</h1>
+        <p>championing diversity, equity, and inclusion through research and strategic initiatives</p>
+    </div>
+
+    <main>
+        <!-- Overview -->
+        <section>
+            <h3>The Overview</h3>
+            <div class="text-container">
+                <h4>Introduction</h4>
+                <p>
+                    At Comcast, I served as the Diversity, Equity, and Inclusion Public Policy Researcher, working to foster an inclusive 
+                    workplace culture across one of the nation's largest telecommunications companies. My role centered on research, 
+                    collaboration, and communication by supporting initiatives that aligned with Comcast's broader social impact goals.
+                </p>
+                <p>
+                    This experience focused on organizational culture and policy. I learned that creating inclusive experiences extends 
+                    beyond user interfaces into the systems, policies, and cultures that shape how people work together. The skills I 
+                    developed in research synthesis, stakeholder communication, and metrics tracking proved just as essential to UX work 
+                    as prototyping and wireframing.
+                </p>
+                <img src="images/comcast_image.jpg" alt="User persona of fictional character Jessica Pell, a recent college graduate" class="user-persona">
+            </div>
+        </section>
+    
+        <!-- Context -->
+        <section>
+            <h3>Context and Challenge</h3>
+            <div class="text-container">
+                <h4>Background</h4>
+                <p>
+                    Comcast's commitment to diversity, equity, and inclusion spans recruitment, retention, advancement, and community engagement. 
+                    The DEI team works across departments to implement policies, track progress, and create programs that make Comcast a more 
+                    inclusive workplace for its thousands of employees.
+                </p>
+            
+                <h4>The Problem</h4>
+                <p>
+                    How do you measure inclusion? How do you communicate complex DEI strategies to diverse stakeholders? How do you support policy 
+                    initiatives with solid research while maintaining employee trust and engagement? These questions required critical thinking, 
+                    careful research, and collaborative problem-solving.
+                </p>
+                
+                <h4>Goals & Objectives</h4>
+                <p>
+                    My objectives focused on supporting the DEI team's broader mission through collaborating across departments to build inclusive 
+                    culture, conducting research to inform policy decisions, organizing materials to communicate strategies effectively, and 
+                    providing project management support through metrics tracking and documentation.
+                </p>
+            </div>
+        </section>
+    
+        <!-- Process -->
+        <section>
+            <h3>Key Projects & Solutions</h3>
+            <div class="text-container">
+                <h4>DEI Policy Research</h4>
+                <p>
+                    I conducted research to support policy initiatives, analyzing best practices from other organizations, reviewing academic literature 
+                    on workplace inclusion, and synthesizing findings into actionable recommendations. This research informed decisions about everything 
+                    from hiring practices to employee resource group support.
+                </p>
+                <p>
+                    The research process taught me to approach sensitive topics with rigor and empathy. Data could illuminate patterns of inequity, but 
+                    numbers alone couldn't capture the lived experiences behind them. I learned to combine quantitative metrics with qualitative insights, 
+                    creating research that was both credible and human-centered.
+                </p>
+
+                <h4>Strategic Communications & Reporting</h4>
+                <p>
+                    I organized internal materials and reports to communicate DEI strategies and progress to stakeholders at all levels. This meant 
+                    translating complex initiatives into clear narratives, creating presentations that resonated with different audiences, and maintaining 
+                    documentation that tracked our work over time.
+                </p>
+
+                <h4>Project Management & Metrics Tracking</h4>
+                <p>
+                    I provided project management support by tracking key metrics and maintaining documentation for ongoing initiatives. This involved 
+                    creating systems to monitor progress toward DEI goals, updating stakeholders on milestones, and ensuring accountability through 
+                    clear record-keeping.
+                </p>
+                <p>
+                    Metrics tracking revealed the importance of choosing meaningful measures. Not everything that matters can be counted, and not 
+                    everything that can be counted matters. I learned to balance quantitative indicators (representation numbers, participation rates) 
+                    with qualitative measures (employee sentiment, cultural shifts) to paint a complete picture of progress.
+                </p>
+            </div>
+        </section>
+    
+        <!-- Results -->
+        <section>
+            <h3>The Results</h3>
+            <div class="text-container">
+                <h4>Conclusion</h4>
+                <p>
+                    My work at Comcast contributed to ongoing DEI initiatives that touched thousands of employees. The research I conducted informed 
+                    policy recommendations, the materials I organized helped communicate strategies across the organization, and the metrics I tracked 
+                    provided visibility into progress toward inclusion goals.
+                </p>
+
+                <p>
+                    I learned that metrics tell stories, but the way we choose, frame, and act on those metrics reflects our values. Numbers can reveal 
+                    disparities, but addressing them requires organizational commitment, cultural change, and sustained effort. Progress isn't linear, 
+                    and meaningful change takes time.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">LinkedIn</a>
+            <a href="mailto:mjc498@drexel.edu" aria-label="Send email">Email</a>
+            <a href="https://github.com/mjc498" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">GitHub</a>
+        </div>
+        <p>&copy; <span id="year"></span> Maria-Louisa Ching. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
