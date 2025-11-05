@@ -4,7 +4,7 @@
 This is my personal portfolio website, created to showcase my design skills, professional background, and featured projects. It serves as a digital resume for potential employers and collaborators.
 
 ## Installation & Access
-You can access the live website [here](https://cronch.framer.website/) *(link under construction)*  
+You can access the live website [here](https://marialouisaching.vercel.app/index.html)
 Alternatively, explore the project files directly in this GitHub repository.
 
 ## Features
