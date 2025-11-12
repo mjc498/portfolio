@@ -22,5 +22,5 @@ Alternatively, explore the project files directly in this GitHub repository.
 Created and maintained by me.
 
 ## Contact
-- [LinkedIn](#)  
-- [Email](mailto:#)
+- [LinkedIn](https://www.linkedin.com/in/maria-louisa-ching/)  
+- [Email](mailto:mjc498@drexel.edu)
