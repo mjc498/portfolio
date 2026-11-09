@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Maria-Louisa Ching featuring UX/UI design case studies and professional co-op projects.">
+    <meta name="keywords" content="UX Portfolio, UI Design Projects, Case Studies, Co-op Experience">
+    <title>Interview Reflection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/vector_logo.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="logo">
+            <a href="home.html" aria-label="Home">
+                <img src="images/vector_logo.svg" alt="Maria-Louisa Ching logo" class="nav-logo">
+            </a>
+            MC
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="my_work.html">My Work</a></li>
+            <li><a href="resume.html" aria-current="page">Résumé</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="work-hero">
+        <h1>Interview Reflection</h1>
+    </div>
+
+    <main>
+        <section class="reflection-section" id="natural" aria-labelledby="natural-heading">
+            <h2 id="natural-heading">What responses came naturally?</h2>
+            <div class="intro-text">
+                <p>The responses that came naturally were the ones about myself and my past experiences. It was easy to reference numbers and skills pulled directly from my résumé because I know exactly what I contributed. Although I’m confident in what I did, I think it would also help employers to see more of my personality beyond my résumé. In future interviews, I want to share more about what motivates me and how I work with others.</p>
+            </div>
+ 
+            <p class="list-label"><b>My best responses:</b></p>
+ 
+            <ul class="response-list">
+                <li>
+                    <i>Tell me about yourself:</i> I am a senior UX/UI student at Drexel University in the 5-year, 3-co-op program. I have 24 months of full-time corporate experience spanning web development, digital marketing, and project management. I am seeking opportunities in UX/UI design, product design, or entry-level product management, where I can combine user research, interaction design, technical knowledge, and cross-functional collaboration to help shape useful, accessible digital products.</li>
+                </li>
+                <li>
+                    <i>What are your strengths and weaknesses:</i> My strengths are attention to detail and using data to make decisions. At NBME, I raised accessibility from 32% to 99%, and at SEPTA I boosted engagement by 25%. My weakness is that I can ramble when explaining my work, so I keep a list of examples organized as situation, task, action, and result, and I practice leading with the main point.</li>
+                </li>
+            </ul>
+        </section>
+ 
+        <section class="reflection-section" id="struggled" aria-labelledby="struggled-heading">
+            <h2 id="struggled-heading">What responses did you struggle with?</h2>
+            <div class="intro-text">
+                <p>I struggled with my STAR responses. I’ve worked four co-ops, so it’s hard for me to choose a specific situation in the moment. After hearing that my classmates keep a journal or list of questions that require a STAR response, I felt inspired to start my own, so I don’t feel lost when answering them. I plan to write down a few situations from each co-op ahead of time so I can choose one quickly.</p>
+            </div>
+ 
+            <p class="list-label"><b>Questions I struggled to answer:</b></p>
+            <ul class="question-list">
+                <li><i>Describe a time when you failed at something. What did you learn?</i></li>
+                <li><i>Describe a challenge you faced and how you overcame it.</i></li>
+            </ul>
+        </section>
+ 
+        <section class="reflection-section" id="feedback" aria-labelledby="feedback-heading">
+            <h2 id="feedback-heading">What type of feedback did you receive?</h2>
+            <div class="intro-text">
+                <p>I received generally good feedback. My behavioral answers following the STAR format could have been better. It took me a while to formulate my responses, and I lacked confidence when explaining the situation. I left out some details because I feared they would bore the employer.</p>
+            </div>
+ 
+            <p class="list-label"><b>Feedback I received:</b></p>
+            <ul class="feedback-list">
+                <li>Strong opener: clear, under 90 seconds</li>
+                <li>Eye contact and open, engaged posture</li>
+                <li>Concise and direct, no rambling</li>
+                <li>Specific examples, with numbers where possible</li>
+                <li>Connected answers back to the role</li>
+                <li>Stayed calm on a tough question</li>
+                <li>Asked thoughtful questions at the end</li>
+            </ul>
+        </section>
+ 
+        <section class="reflection-section last-section" id="improve" aria-labelledby="improve-heading">
+            <h2 id="improve-heading">Ideas for improving your answers and techniques?</h2>
+            <div class="intro-text">
+                <p>I will keep a handy list of general questions and answers ready to practice, especially behavioral questions. I also need to stop rambling and get straight to the point without being too vague.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/maria-louisa-ching/" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">LinkedIn</a>
+            <a href="mailto:mjc498@drexel.edu" aria-label="Send email">Email</a>
+            <a href="https://github.com/mjc498" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">GitHub</a>
+        </div>
+        <p>&copy; <span id="year"></span> Maria-Louisa Ching. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Portfolio
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.portfolio-card').forEach(card => {
+                const href = card.getAttribute('data-href');
+                if (!href) return;
+    
+                const navigate = () => (window.location.href = href);
+    
+                card.addEventListener('click', navigate);
+                card.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        navigate();
+                    }
+                });
+            });
+        });
+    
+        // Copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
+    
+        // Navigation
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
